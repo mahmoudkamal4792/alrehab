@@ -1,0 +1,32 @@
+.main-breadcrumb {
+    height: 21rem;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: var(--header-height);
+
+    @include md {
+        height: 14rem;
+        padding-top: var(--header-height-xs);
+    }
+
+    .page-title {
+        color: #fff;
+        font-size: 3.5rem;
+        font-weight: 600;
+        margin: 0;
+        position: relative;
+    }
+}
+
+.breadcrumb-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.5;
+    background-image: linear-gradient(to bottom, #000 0, transparent 100%);
+}

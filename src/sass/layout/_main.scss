@@ -1,0 +1,54 @@
+.main-wrapper {
+    padding-top: 2.5rem;
+}
+
+.default-section {
+    padding: 60px 0;
+    
+    &.white-bg {
+        background-color: #fff;
+    }
+    &.gray-bg {
+        background-color: #F6F6F6;
+    }
+    
+}
+
+.default-section-title {
+    font-size: 42px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.default-section-desc {
+    @extend .--section-desc;
+    text-align: center;
+    max-width: 870px;
+    margin: 0 auto 60px;
+}
+
+@media (max-width:479px) {
+    .col-mob-12 {
+        width: 100%;
+    }
+    .col-mob-9 {
+        width: 75%;
+    }
+    .col-mob-8 {
+        width: 66.6666%;
+    }
+    .col-mob-3 {
+        width: 25%;
+    }
+    .col-mob-4 {
+        width: 33.3333%;
+    }
+    .hidden-mob {
+        display: none;
+    }
+}
+@media (min-width:481px) {
+    .visible-mob {
+        display: none;
+    }
+}

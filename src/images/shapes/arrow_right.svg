@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="35.5" height="15" viewBox="0 0 35.5 15">
+  <g id="arrow" transform="translate(-1557.5 -2726)">
+    <line id="Line_1" data-name="Line 1" x2="25" transform="translate(1558.5 2733.5)" fill="none" stroke="#f62d2d" stroke-linecap="round" stroke-width="2"/>
+    <path id="Polygon_2" data-name="Polygon 2" d="M6.634,1.5a1,1,0,0,1,1.732,0l5.769,10a1,1,0,0,1-.866,1.5H1.731a1,1,0,0,1-.866-1.5Z" transform="translate(1593 2726) rotate(90)" fill="#f62d2d"/>
+  </g>
+</svg>

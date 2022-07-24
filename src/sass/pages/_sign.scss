@@ -1,0 +1,258 @@
+.sign-wrapper {
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  .form-content {
+    padding: 50px;
+    width: 100%;
+    max-width: 1030px;
+    min-height: 100vh;
+    position: relative;
+    margin: auto;
+    transform: perspective(1px);
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      box-shadow: 0px 20px 20px #00000029;
+      border: 1px solid #cf202042;
+      backdrop-filter: blur(12px);
+      background-color: rgba(255, 255, 255, 0.09);
+      content: "";
+      z-index: -1;
+    }
+    @include sm {
+      padding: 25px 15px;
+    }
+  }
+
+  .sign-logo {
+    margin: auto;
+    display: block;
+    width: 179px;
+    margin-bottom: 30px;
+  }
+  .sign-head {
+    margin: 0 0 50px;
+  }
+  .sign-title {
+    text-align: center;
+    font-size: 42px;
+    color: #fff;
+    font-weight: 600;
+    margin: 0 0 8px;
+  }
+  .sign-subtitle {
+    font-size: 28px;
+    color: #989898;
+    font-weight: 500;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.sign-form {
+  &.log-form {
+    width: 100%;
+    max-width: 452px;
+    margin: auto;
+  }
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 20px;
+    .form-grid {
+      gap: 0 9px;
+    }
+    @include sm {
+      grid-template-columns: 1fr;
+    }
+  }
+  .sign-group {
+    margin-bottom: 18px;
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+  .sign-input {
+    width: 100%;
+    height: 59px;
+    background-color: rgba(255, 255, 255, 0.09);
+    box-shadow: 0px 20px 20px #00000029;
+    border: 1px solid #7070702b;
+    border-radius: 10px;
+    opacity: 1;
+    backdrop-filter: blur(32px) brightness(-15%);
+    color: #848484;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0 33px;
+    &::placeholder {
+      opacity: 0.6;
+      color: #848484;
+    }
+    &:focus {
+      border-color: $primary;
+    }
+  }
+  .tel-cont {
+    display: flex;
+    align-items: center;
+    span {
+      width: 82px;
+      flex-shrink: 0;
+      height: 59px;
+      background-color: rgba(255, 255, 255, 0.09);
+      box-shadow: 0px 20px 20px #00000029;
+      border: 1px solid #7070702b;
+      border-radius: 10px;
+      opacity: 1;
+      backdrop-filter: blur(32px) brightness(-15%);
+      color: #848484;
+      font-size: 18px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-inline-end: 9px;
+      img {
+        margin-inline-start: 4px;
+      }
+    }
+  }
+  .date-cont {
+    position: relative;
+  }
+  .icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    inset-inline-end: 18px;
+  }
+  .file-cont {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    flex-shrink: 0;
+    height: 59px;
+    background-color: rgba(255, 255, 255, 0.09);
+    box-shadow: 0px 20px 20px #00000029;
+    border: 1px solid #7070702b;
+    border-radius: 10px;
+    opacity: 1;
+    backdrop-filter: blur(32px) brightness(-15%);
+    color: #848484;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding: 0 33px;
+    input {
+      display: none;
+    }
+  }
+}
+
+.sign-btn {
+  outline: none !important;
+  width: 100%;
+  max-width: 454px;
+  margin: 37px auto 0;
+  height: 65px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-size: 24px;
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    color: #fff;
+  }
+  &.disabled {
+    opacity: 0.2;
+    color: #fff;
+  }
+}
+
+.form-hint {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 48px 0 0;
+  color: #fff;
+  font-size: 28px;
+  font-weight: 500;
+  a {
+    font-weight: 700;
+    color: $primary;
+    margin-inline-start: 5px;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.inputs-numbers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  direction: ltr;
+  .code-input {
+    width: 75px;
+    height: 75px;
+    padding: 0;
+    text-align: center;
+    ~ .code-input {
+      margin-inline-start: 50px;
+      @include sm {
+        margin-inline-start: 10px;
+      }
+    }
+    &:disabled {
+      opacity: 0.7;
+    }
+    @include sm {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
+.otp-head {
+  text-align: center;
+  margin-bottom: 38px;
+  strong {
+    font-size: 28px;
+    color: #fff;
+    margin: 15px 0;
+    display: block;
+    font-weight: 600;
+  }
+  a {
+    color: $primary;
+    font-size: 28px;
+    font-weight: 600;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.forget-pass {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0 0;
+  a {
+    color: $primary;
+    font-size: 28px;
+    font-weight: 600;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

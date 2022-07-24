@@ -1,0 +1,83 @@
+.cars-list {
+    --item-width: 280px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--item-width), 1fr));
+    gap: 35px;
+
+    @include sm {
+        --item-width: 180px;
+        gap: 15px;
+    }
+
+    .car-item {
+        background-color: #fff;
+        border-radius: 10px;
+        padding-top: 25px;
+        padding-bottom: 15px;
+
+        .car-item-head {
+            padding-inline-start: 24px;
+            border-inline-start: 6px solid #E9E9E9;
+            
+            .car-name {
+                color: #000;
+                font-size: 38px;
+                font-weight: 700;
+                margin: 0;
+                line-height: 1;
+            }
+            .car-model {
+                color: #BABABA;
+                font-size: 16px;
+                font-weight: 500;
+            }
+        }
+
+        .car-price {
+            color: #2EE17B;
+            font-size: 30px;
+            font-weight: 700;
+            padding-inline-start: 30px;
+
+            span {
+                color: #000;
+            }
+        }
+
+        .car-img {
+            margin-top: -10px;
+            padding-top: 30px;
+            transition: 0.3s ease;
+            text-align: center;
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        .car-cta {
+            width: 180px;
+            font-size: 20px;
+            font-weight: 500;
+            background-color: $primaryColor;
+            color: #fff;
+            border-radius: 10px;
+            display: block;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 0;
+            transition: 0.3s ease;
+        }
+
+        &:hover {
+            .car-img {
+                padding-top: 0;
+            }
+            .car-cta {
+                height: 30px;
+            }
+        }
+    }
+}

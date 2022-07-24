@@ -1,0 +1,134 @@
+nav {
+
+    --menu-width: 300px;
+    z-index: 99999;
+    position: relative;
+
+    @include md {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        inset-inline-start: calc(0px - var(--menu-width));
+        height: 100vh;
+        width: var(--menu-width);
+        padding: 55px 0 40px;
+        overflow-y: auto;
+        background-color: #fff;
+        transition: 0.3s ease;
+
+        body.active-navbar & {
+            inset-inline-start: 0;
+        }
+
+        &::-webkit-scrollbar {
+            background-color: #fff;
+            width: 7px;
+            height: 0px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: $primaryColor;
+        }
+    }
+    .main-navbar {
+        // 
+    
+        .main-nav-menu {
+            @include md {
+                display: block;
+            }
+
+            > li {
+                position: relative;
+
+                @include md {
+                    color: #777;
+                }
+    
+                > a {
+                    color: inherit;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    padding: 0 1.9rem;
+                    line-height: var(--header-height);
+                    display: block;
+
+                    @include md {
+                        line-height: 40px;
+                        font-size: 1.25rem;
+                    }
+                }
+    
+                &:hover {
+                    color: $primaryColor;
+                }
+    
+                &.active {
+                    color: $primaryColor;
+                }
+    
+                &.active:after {
+                    content: '';
+                    position: absolute;
+                    bottom: -2px;
+                    background-color: $primaryColor;
+                    border-radius: 4px;
+                    height: 4px;
+                    left: 0;
+                    right: 0;
+
+                    @include md {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.nav-btn {
+    display: none;
+    color: #fff;
+
+    @include md {
+        display: block;
+    }
+}
+
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(32px) brightness(0.5);
+    visibility: hidden;
+    opacity: 0;
+    z-index: 99998;
+    display: none;
+    transition: 0.3s ease;
+
+    @include md {
+        display: block;
+    }
+
+    body.active-navbar & {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.nav-close-btn {
+    position: absolute;
+    top: 0;
+    inset-inline-end: 0;
+    padding: 10px 15px;
+    display: none;
+
+    @include md {
+        display: block;
+    }
+}

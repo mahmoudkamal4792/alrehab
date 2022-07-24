@@ -1,0 +1,27 @@
+.form-group {
+    margin-bottom: 40px;
+
+    .form-control {
+        background-color: #F3F3F3;
+        border-radius: 10px;
+        height: 3rem;
+        padding: 0 1.6rem;
+        color: #848484;
+        font-size: 18px;
+        font-weight: 500;
+        border: none;
+
+        &::placeholder {
+            opacity: 0.63;
+        }
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    textarea.form-control {
+        min-height: 135px;
+        padding-top: 25px;
+    }
+}

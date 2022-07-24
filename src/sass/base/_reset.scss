@@ -1,0 +1,76 @@
+/* General Resets */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #000 #fff;
+    font-size: 18px;
+
+    @include lg() {
+        font-size: 20px;
+    }
+
+    @include md() {
+        font-size: 16px;
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+body {
+    font-family: 'Somar';
+    color: var(--font-color);
+
+    &::-webkit-scrollbar {
+        background-color: #fff;
+        width: 7px;
+        height: 0px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #000;
+    }
+
+    &.ovh {
+        overflow: hidden;
+    }
+}
+
+input:focus, button:focus, a:focus, select:focus, textarea:focus {
+    outline: 0;
+}
+input::placeholder {
+    color: inherit;
+}
+a, a:hover, a:focus {
+    text-decoration: none;
+    color:inherit
+}
+button {
+    border: none;
+    background: none;
+    outline: 0;
+}
+a, img, button, input, select {
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease
+}
+[role="button"] {
+    cursor: pointer;
+}
+
+/* Lists */
+.mk-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.mk-inlinelist {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}

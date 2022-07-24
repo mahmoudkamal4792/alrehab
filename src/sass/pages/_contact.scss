@@ -1,0 +1,95 @@
+.--contact-column {
+    width: 50%;
+    border-radius: 10px;
+
+    @include md {
+        width: 100%;
+    }
+}
+.contact-container {
+    display: flex;
+    gap: .75rem;
+    padding: .5rem 0 3rem;
+
+    @include md {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .contact-form {
+        @extend .--contact-column;
+
+        background-color: #fff;
+        padding: 1.2rem;
+        position: relative;
+
+        .contact-btn {
+            color: #fff;
+            width: 9.25rem;
+            height: 2.5rem;
+            position: absolute;
+            bottom: -1rem;
+            left: 50%;
+            transform: translateX(-50%);
+
+            @include sm {
+                position: static;
+                transform: none;
+                width: 100%;
+            }
+        }
+    }
+
+    .contact-details {
+        @extend .--contact-column;
+
+        background-color: #151515;
+        color: #fff;
+        padding: 2.5rem;
+
+        .contact-title {
+            font-size: 1.75rem;
+            line-height: 2.1rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+
+            @include sm {
+                text-align: center;
+            }
+        }
+
+        .addresses-list {
+            padding: 0.5rem 0 2rem;
+        }
+
+        .address-item {
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+
+            @include sm {
+                gap: 1.2rem;
+            }
+
+            i {
+                color: $primaryColor;
+                font-size: 22px;
+            }
+
+            span {
+                font-size: 1.25rem;
+                font-weight: 500;
+            }
+        }
+
+        .social-list {
+            display: flex;
+            gap: 3.5rem;
+
+            @include sm {
+                justify-content: center;
+            }
+        }
+    }
+}

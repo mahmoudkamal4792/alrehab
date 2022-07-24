@@ -1,0 +1,166 @@
+.accounts-list {
+  display: flex;
+  justify-content: center;
+  gap: 50px 15px;
+  padding-bottom: 3.5rem;
+  @include sm {
+    flex-direction: column;
+    gap: unset;
+    padding-bottom: 1.5rem;
+  }
+}
+
+.account-option {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 40px;
+  padding-inline-start: 24px;
+  padding-inline-end: 33px;
+  width: 100%;
+  cursor: pointer;
+  @include sm {
+    margin: 10px 0;
+  }
+  &:hover .option-label {
+    --checked: 0.2;
+  }
+
+  input {
+    display: none;
+
+    &:checked + .option-label {
+      --checked: 1;
+    }
+  }
+
+  .option-label {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid var(--label-color);
+    top: 18px;
+    inset-inline-end: 30px;
+    padding: 3px;
+    --checked: 0;
+
+    span {
+      border-radius: 50%;
+      height: 100%;
+      width: 100%;
+      display: block;
+      background-color: var(--label-color);
+      opacity: var(--checked);
+      transition: 0.3s ease;
+    }
+  }
+
+  &.gold {
+    background-color: #fdf9eb;
+
+    .option-label {
+      --label-color: #eabf3f;
+    }
+
+    .account-option-name {
+      color: #ffc139;
+    }
+  }
+  &.silver {
+    background-color: #f3f3f3;
+
+    .option-label {
+      --label-color: #5b5b5b;
+    }
+
+    .account-option-name {
+      color: #686868;
+    }
+  }
+  &.bronze {
+    background-color: #f7f1e8;
+
+    .option-label {
+      --label-color: #b4731f;
+    }
+
+    .account-option-name {
+      color: #915c19;
+    }
+  }
+
+  .account-option-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+
+    @include sm {
+      align-items: flex-end;
+    }
+
+    .account-option-name {
+      font-size: 1.8rem;
+      font-weight: 700;
+      line-height: 40px;
+      margin-top: 5px;
+
+      span {
+        display: block;
+        margin-top: 10px;
+
+        @include sm {
+          line-height: 1;
+        }
+      }
+    }
+    .account-option-price {
+      font-weight: 700;
+
+      p {
+        color: #2ee17b;
+        font-size: 2.5rem;
+        line-height: 60px;
+        margin-bottom: 0;
+
+        @include sm {
+          line-height: 1;
+          font-size: 2rem;
+        }
+
+        span {
+          font-size: 32px;
+        }
+      }
+      .discount-label {
+        color: #000;
+        font-size: 27px;
+        line-height: 1;
+
+        span {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
+
+.account-pay-btn {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0px 20px 27px #f62d2d26;
+  border-radius: 10px;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 2.5rem;
+
+  &:hover {
+    color: #fff;
+    outline: none;
+  }
+}

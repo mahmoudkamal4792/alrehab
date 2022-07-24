@@ -1,0 +1,51 @@
+.pay-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px 20px 80px;
+  border-radius: 10px;
+  background-color: #fff;
+  @include md {
+    display: flex;
+    gap: unset;
+    flex-direction: column-reverse;
+    padding: 0;
+    background-color: transparent;
+  }
+}
+.pay-form {
+  padding-top: 20px;
+  .form-group {
+    margin-bottom: 14px;
+  }
+  .form-line {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  .account-pay-btn {
+    margin-top: 20px;
+    max-width: 165px;
+  }
+}
+
+.selected-account {
+  border-radius: 20px;
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+  padding-inline-start: 1.2rem;
+  padding-inline-end: 1.6rem;
+  width: 100%;
+  cursor: default;
+}
+
+.selectd-account-text {
+  font-size: 1.1rem;
+  color: #565656;
+  font-weight: 300;
+  margin: 2rem 0 0;
+
+  @include sm {
+    text-align: center;
+  }
+}

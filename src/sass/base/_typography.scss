@@ -1,0 +1,44 @@
+/* Fonts */
+@font-face {
+    font-family: 'Somar';
+    src: local('Somar Light'), local('Somar-Light'),
+        url('../../fonts/Somar-Light.woff2') format('woff2'),
+        url('../../fonts/Somar-Light.woff') format('woff'),
+        url('../../fonts/Somar-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Somar';
+    src: local('Somar Medium'), local('Somar-Medium'),
+        url('../../fonts/Somar-Medium.woff2') format('woff2'),
+        url('../../fonts/Somar-Medium.woff') format('woff'),
+        url('../../fonts/Somar-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Somar';
+    src: local('Somar SemiBold'), local('Somar-SemiBold'),
+        url('../../fonts/Somar-SemiBold.woff2') format('woff2'),
+        url('../../fonts/Somar-SemiBold.woff') format('woff'),
+        url('../../fonts/Somar-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Somar';
+    src: local('Somar Bold'), local('Somar-Bold'),
+        url('../../fonts/Somar-Bold.woff2') format('woff2'),
+        url('../../fonts/Somar-Bold.woff') format('woff'),
+        url('../../fonts/Somar-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}

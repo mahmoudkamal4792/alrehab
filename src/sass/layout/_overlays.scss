@@ -1,0 +1,23 @@
+/* Overlays */
+body {
+    background-image: linear-gradient(to bottom, transparent 50%, #fff 50%), linear-gradient(to right, #f3f3f3 50%, #fff 50%);
+    background-size: 4px 4px, 4px 4px;
+}
+.navOverlay {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.6);
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999998;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.navOverlay.open {
+    visibility: visible;
+    opacity: 1;
+}

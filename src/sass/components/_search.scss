@@ -1,0 +1,58 @@
+.search-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    background: linear-gradient(0deg, rgba(2, 3, 5, 0) 0%, #000000 100%) 0% 0% no-repeat padding-box;
+    backdrop-filter: blur(3px);
+    padding-top: 6rem;
+    transition: 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .search-form {
+        max-width: 30%;
+        margin: 0 auto;
+        position: relative;
+
+        @include md {
+            max-width: 90%;
+        }
+
+        .form-control {
+            border: none;
+            border-bottom: 1px solid #CCCCCC;
+            color: #CCCCCC;
+            background-color: transparent;
+            height: 44px;
+            font-size: 25px;
+            border-radius: 0;
+            padding: 0;
+
+            &:focus {
+                border-color: $primaryColor;
+            }
+        }
+        .search-close-btn {
+            position: absolute;
+            top: 0;
+            inset-inline-end: 0;
+            background-color: transparent;
+            color: #CCCCCC;
+            font-size: 28px;
+            line-height: 1;
+            font-weight: 300;
+
+            &:hover {
+                color: $primaryColor;
+            }
+        }
+    }
+}

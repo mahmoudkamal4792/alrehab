@@ -1,0 +1,134 @@
+.cars-page-grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 26px;
+  @include md {
+    grid-template-columns: 1fr;
+  }
+  .cars-list {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 26px;
+    max-width: 100%;
+    overflow: hidden;
+    @include sm {
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    @include xs {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+  .car-item {
+    max-width: 100%;
+    overflow: hidden;
+    img {
+      max-width: 100%;
+    }
+  }
+}
+.filters {
+  max-width: 100%;
+  overflow: hidden;
+}
+.filter-block {
+  background-color: #fff;
+  border-radius: 10px;
+  max-width: 100%;
+  overflow: hidden;
+  margin-bottom: 6px;
+  &.price-block {
+    padding: 30px 18px;
+  }
+  .price-title {
+    margin-bottom: 20px;
+    color: #000000;
+    font-size: 25px;
+    font-weight: 500;
+  }
+  .values {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  span {
+    font-size: 16px;
+    color: #000;
+    font-weight: 700;
+    strong {
+      font-size: 24px;
+    }
+  }
+  .seperate {
+    margin: 0 12px;
+  }
+}
+
+.range-slider-cont {
+  position: relative;
+  .range-slider-input {
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 2px;
+    border-radius: 0;
+    background: #e0e0e9;
+    position: relative;
+    &::-webkit-slider-thumb {
+      appearance: none;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #000000;
+      cursor: pointer;
+      box-shadow: none;
+      z-index: 9;
+      position: relative;
+    }
+  }
+  .value-bg {
+    width: 0;
+    height: 2px;
+    top: 64%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border-radius: 5px;
+    position: absolute;
+    content: "";
+    background-color: #000000;
+    pointer-events: none;
+    inset-inline-start: 0;
+  }
+}
+
+.filter-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline-start: 20px;
+  height: 160px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  .filter-name {
+    font-size: 26px;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+    max-width: 50%;
+    transition: all 0.3s ease-in-out;
+  }
+  .filter-img {
+    max-width: 50%;
+    transition: all 0.3s ease-in-out;
+  }
+  &:hover{
+    background-color: #1E1E1E;
+    .filter-name{
+      color: $primary;
+    }
+    .filter-img{
+      transform: translateX(10px);
+    }
+  }
+}
