@@ -69,6 +69,10 @@
             justify-content: center;
             height: 0;
             transition: 0.3s ease;
+
+            @include sm {
+                height: 30px;
+            }
         }
 
         &:hover {

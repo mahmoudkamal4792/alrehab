@@ -1,0 +1,160 @@
+.single-grid {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 123px;
+
+  @include md {
+    flex-direction: column;
+  }
+}
+.single-imgs {
+  width: 45%;
+  position: relative;
+  text-align: center;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  border-radius: 10px;
+
+  @include md {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .single-swiper {
+    img {
+        width: 100%;
+    }
+  }
+
+  .thumbs-swiper {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+
+    .swiper-slide {
+        overflow: hidden;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        cursor: pointer;
+
+      &.swiper-slide-thumb-active {
+        border-color: $primaryColor;
+      }
+    }
+  }
+}
+.single-infos {
+  width: 50%;
+
+  @include md {
+    width: 100%;
+  }
+
+  .single-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .single-title {
+    font-size: 72px;
+    color: #000;
+    font-weight: 700;
+    margin: 0;
+    @include sm {
+      font-size: 36px;
+    }
+  }
+  .single-price {
+    font-size: 45px;
+    font-weight: 700;
+    color: #2ee17b;
+    span {
+      font-size: 30px;
+      color: #000;
+    }
+    @include sm {
+      font-size: 30px;
+    }
+    span {
+      font-size: 24px;
+    }
+  }
+
+  .year {
+    font-size: 33px;
+    color: #bababa;
+    font-weight: 500;
+  }
+
+  .car-desc {
+    color: #565656;
+    font-size: 23px;
+    line-height: 20px;
+    font-weight: 300;
+    padding-inline-end: 30px;
+  }
+  .book-form {
+  }
+  .book-group {
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .book-line {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9px;
+  }
+
+  .book-input {
+    width: 100%;
+    height: 3.6rem;
+    background-color: #f3f3f3;
+    border: 1px solid #f3f3f3;
+    border-radius: 10px;
+    opacity: 1;
+    color: #808080;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0 33px;
+    &::placeholder {
+      opacity: 0.5;
+      color: #000;
+    }
+    &:focus {
+      border-color: $primary;
+    }
+
+    &:is(select) {
+        appearance: none;
+    }
+  }
+  .date-cont {
+    position: relative;
+  }
+  .icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    inset-inline-end: 18px;
+  }
+  .book-btn {
+    width: 100%;
+    height: 3.6rem;
+    box-shadow: 0px 20px 27px #f62d2d26;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 500;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      color: #fff;
+    }
+  }
+}

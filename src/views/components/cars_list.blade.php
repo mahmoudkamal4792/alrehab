@@ -3,7 +3,7 @@
         @php
             $car_img = "images/products/" . (($i % 4) + 1) . ".png";
         @endphp
-        <a class="car-item" href="#">
+        <a class="car-item" href="/single">
             <div class="car-item-head">
                 <h4 class="car-name">بورش ناميرا</h4>
                 <span class="car-model">2002</span>

@@ -1,7 +1,8 @@
 const $ = require('jquery');
-import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation, Pagination, Thumbs } from 'swiper';
 
 import 'swiper/css';
+import 'swiper/css/thumbs';
 // import 'swiper/css/navigation';
 // import 'swiper/css/pagination';
 
@@ -19,6 +20,25 @@ $('.intro-controls > button').on('click', (e) => {
     }
 });
 
+// Single
+const thumbsSwiper = new Swiper('.thumbs-swiper', {
+    loop: true,
+    spaceBetween: 10,
+    slidesPerView: 5,
+    watchSlidesProgress: true,
+    freeMode: true,
+});
+
+const singleSwiper = new Swiper('.single-swiper', {
+    loop: true,
+    spaceBetween: 10,
+    modules: [Thumbs],
+    thumbs: {
+        swiper: thumbsSwiper,
+    },
+});
+
+// Branches
 const branchSwiper = new Swiper('.branches-swiper', {
     loop: true,
     slidesPerView: 1,
