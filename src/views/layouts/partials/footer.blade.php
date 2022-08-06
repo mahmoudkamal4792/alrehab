@@ -9,21 +9,27 @@
                         <div class="footer-control">
                             <label for="currency">العملة</label>
                             <div class="dropdown">
-                                <a role="button" class="dropdown-button">
+                                <a role="button" class="dropdown-button" data-bs-toggle="dropdown">
                                     <img src="images/ar.png" alt="SAR">
                                     <i class="fas fa-angle-down"></i>
                                 </a>
-                                <ul class="dropdown-menu">
+                                <ul class="dropdown-menu dd-striped">
                                     <li>
                                         <a href="#">
+                                            <img src="images/sar.png" alt="SAR">
                                             <span>الريال السعودي</span>
-                                            <img src="images/ar.png" alt="SAR">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
+                                            <img src="images/aed.png" alt="AED">
                                             <span>الدرهم الإماراتي</span>
-                                            <img src="images/sar.png" alt="SAR">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/usd.png" alt="USD">
+                                            <span>الدولار الأمريكي</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -32,21 +38,21 @@
                         <div class="footer-control">
                             <label for="currency">اللغة</label>
                             <div class="dropdown">
-                                <a role="button" class="dropdown-button">
+                                <a role="button" class="dropdown-button" data-bs-toggle="dropdown">
                                     <img src="images/ar.png" alt="Arabic">
                                     <i class="fas fa-angle-down"></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li>
                                         <a href="#">
+                                            <img src="images/ar.png" alt="العربية">
                                             <span>العربية</span>
-                                            <img src="images/ar.png" alt="SAR">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
+                                            <img src="images/en.png" alt="English">
                                             <span>English</span>
-                                            <img src="images/en.png" alt="SAR">
                                         </a>
                                     </li>
                                 </ul>

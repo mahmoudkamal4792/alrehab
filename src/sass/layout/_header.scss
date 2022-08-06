@@ -37,8 +37,113 @@
     }
   }
 
-  .search-btn {
-    color: #fff;
+  .header-btns {
+    display: flex;
+    gap: 0.5rem;
+    --gutter: 1rem;
+    margin: 0 calc(0 - var(--gutter));
+    align-self: stretch;
+
+    @include sm {
+        --gutter: 0.6rem;
+    }
+
+    .dropdown {
+        display: flex;
+
+        .dropdown-menu {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            margin: 0;
+        }
+    }
+
+    .header-btn {
+        color: #fff;
+        --icon-font-size: 1rem;
+        font-size: var(--icon-font-size);
+        padding: 0 var(--gutter);
+
+        &:hover {
+            color: $primaryColor;
+        }
+
+        .feather {
+            width: var(--icon-font-size);
+            height: var(--icon-font-size);
+        }
+    }
+
+    .notifications-menu {
+        padding: 1.75rem 0;
+        inset-inline-end: -2rem;
+        width: 70vw;
+        max-width: 400px;
+        height: 70vh;
+        max-height: 450px;
+        overflow: auto;
+
+        .notification-item {
+            padding: 0.75rem 2.75rem;
+            line-height: 1.5;
+
+            &:hover {
+                background-color: #404040;
+            }
+
+            h4 {
+                font-size: 1.5rem;
+                font-weight: 700;
+                line-height: 1.8rem;
+                color: #fff;
+                margin: 0;
+            }
+
+            p {
+                font-size: 1.2rem;
+                font-weight: 300;
+                line-height: 1.5rem;
+                color: #CCCCCC;
+                margin: 0;
+            }
+
+            span {
+                font-size: 1.2rem;
+                line-height: 1.5rem;
+                color: #F62D2D;
+                display: block;
+            }
+        }
+    }
+
+    .usernav-menu {
+        padding: 0.75rem 1.75rem;
+        inset-inline-end: 0;
+
+        li {
+            border-bottom: 1px solid #2F0808;
+            
+            a {
+                font-size: 1.25rem;
+                padding: 10px 0;
+                color: #fff;
+
+                &.logout-btn {
+                    color: $primaryColor;
+                }
+
+            }
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            &:hover a {
+                margin-inline-start: 10px;
+            }
+        }
+
+    }
   }
 
   .register-btn {

@@ -7,9 +7,19 @@
 
             @include('layouts.partials.nav')
 
-            <button class="nav-btn" id="nav-btn"><i data-feather="menu"></i></button>
-            <button class="search-btn" id="search-modal-btn"><i data-feather="search"></i></button>
+            <div class="header-btns">
+                <button class="header-btn nav-btn" id="nav-btn"><i data-feather="menu"></i></button>
+
+                @include('layouts.partials.notifications')
+                
+                <button class="header-btn" id="search-modal-btn"><i data-feather="search"></i></button>
+                
+                @include('layouts.partials.user_nav')
+            </div>
+            
+            @if(!$logged)
             <a href="/register" class="register-btn btn-primary">سجل الآن</a>
+            @endif
         </div>
     </div>
 </header>

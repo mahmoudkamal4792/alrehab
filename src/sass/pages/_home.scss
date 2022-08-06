@@ -109,9 +109,14 @@
                 justify-content: center;
             }
 
-            a:hover {
-                transform: translateY(-10px);
+            a {
+                display: inline-block;
+                
+                &:hover img {
+                    transform: translateY(-10px);
+                }
             }
+
         }
     }
 
