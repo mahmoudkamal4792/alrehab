@@ -41,6 +41,7 @@
     padding: 30px 18px;
   }
   .price-title {
+    display: block;
     margin-bottom: 20px;
     color: #000000;
     font-size: 25px;
@@ -50,6 +51,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: row-reverse;
+    margin-top: 10px;
   }
   span {
     font-size: 16px;
@@ -66,39 +69,30 @@
 
 .range-slider-cont {
   position: relative;
-  .range-slider-input {
-    width: 100%;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    height: 2px;
-    border-radius: 0;
-    background: #e0e0e9;
-    position: relative;
-    &::-webkit-slider-thumb {
-      appearance: none;
+
+  .irs--round {
+    height: 10px;
+
+    .irs-line {
+      top: 4.5px;
+      height: 1px;
+      cursor: pointer;
+    }
+    .irs-handle {
       width: 10px;
       height: 10px;
-      border-radius: 50%;
-      background: #000000;
+      border: none;
+      background: #000;
+      top: 0;
       cursor: pointer;
-      box-shadow: none;
-      z-index: 9;
-      position: relative;
     }
-  }
-  .value-bg {
-    width: 0;
-    height: 2px;
-    top: 64%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    border-radius: 5px;
-    position: absolute;
-    content: "";
-    background-color: #000000;
-    pointer-events: none;
-    inset-inline-start: 0;
+
+    .irs-bar {
+      top: 4.5px;
+      height: 1px;
+      background-color: #000;
+      cursor: pointer;
+    }
   }
 }
 
@@ -122,12 +116,12 @@
     max-width: 50%;
     transition: all 0.3s ease-in-out;
   }
-  &:hover{
-    background-color: #1E1E1E;
-    .filter-name{
+  &:hover {
+    background-color: #1e1e1e;
+    .filter-name {
       color: $primary;
     }
-    .filter-img{
+    .filter-img {
       transform: translateX(10px);
     }
   }

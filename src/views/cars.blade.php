@@ -17,22 +17,28 @@
                 </span>
 
                 <div class="range-slider-cont">
-                    <input type="range" class="range-slider-input" min="0" max="100" step="10" value="0">
-                    <span class="value-bg"></span>
+                    <input type="hidden" id="price-range-slider" class="range-slider-input" data-type="double" data-min="0" data-max="1000" value="">
                 </div>
 
                 <div class="values">
                     <span>
-                        <strong>0</strong> ر.س
+                        <strong class="min-price">0</strong> ر.س
                     </span>
                     <span class="seperate">
                         -
                     </span>
                     <span>
-                        <strong class="value">0</strong> ر.س
+                        <strong class="max-price">0</strong> ر.س
                     </span>
                 </div>
             </div>
+
+            <script>
+                function submitPriceRange (data) {
+                    console.log(data)
+                }
+            </script>
+
             @include('components.filters', ['count' => 5])
         </div>
         @include('components.cars_list', ['count' => 9])

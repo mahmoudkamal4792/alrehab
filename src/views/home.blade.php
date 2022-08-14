@@ -4,7 +4,7 @@
 @section('PageTitle', 'الرئيسية')
 
 @section('PageContent')
-    <section class="default-section">
+    <section class="default-section categories-section">
         <div class="container">
             <h2 class="default-section-title">إختر الفئة</h2>
             <p class="default-section-desc">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق</p>
