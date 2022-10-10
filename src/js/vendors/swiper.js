@@ -44,6 +44,7 @@ const branchSwiper = new Swiper('.branches-swiper', {
     slidesPerView: 1,
     spaceBetween: 8,
     autoplay: true,
+    slideToClickedSlide: true,
     breakpoints: {
         640: {
             slidesPerView: 2,
@@ -53,3 +54,5 @@ const branchSwiper = new Swiper('.branches-swiper', {
         }
     }
 });
+
+window.branchSwiper = branchSwiper;

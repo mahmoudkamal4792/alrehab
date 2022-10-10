@@ -105,3 +105,5 @@
 </footer>
 
 <script src="js/app.js?v={{ rand(0,9999) }}"></script>
+
+@stack('footer')
