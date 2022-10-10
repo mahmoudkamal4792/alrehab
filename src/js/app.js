@@ -13,3 +13,4 @@ require("./vendors/range-slider");
 require("./components/search");
 require("./components/otp");
 require("./components/nav");
+require("./components/reserve");

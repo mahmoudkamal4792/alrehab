@@ -113,4 +113,6 @@
             </div>
         </div>
     </div>
+
+    @include('components.reserve')
 @endsection

@@ -1,0 +1,113 @@
+.reserve-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    background: linear-gradient(0deg, rgba(2, 3, 5, 0) 0%, #000000 100%) 0% 0% no-repeat padding-box;
+    backdrop-filter: blur(3px);
+    padding-top: 6rem;
+    transition: 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .reserve-content {
+        max-width: 30%;
+        margin: 0 auto;
+        position: relative;
+        background-color: #fff;
+        border-radius: 10px;
+        text-align: center;
+        padding: 40px 65px 25px;
+
+        @include md {
+            max-width: 90%;
+        }
+
+        .reserve-title {
+            font-size: 35px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        .reserve-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            .reserve-carname {
+                font-size: 36px;
+                font-weight: 700;
+                margin: 0;
+            }
+            .reserve-price {
+                color: var(--custom-color-green);
+                font-size: 24px;
+                font-weight: 700;
+
+                .the-currency {
+                    font-size: 15px;
+                }
+                .the-duration {
+                    font-size: 16px;
+                    color: $textColor;
+                }
+            }
+        }
+
+        .reserve-year {
+            color: #BABABA;
+            font-size: 16px;
+            font-weight: 500;
+            text-align: start;
+            margin-top: -5px;
+        }
+
+        .reserve-totals {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 6px;
+
+            .reserve-total {
+                background-color: #F3F3F3;
+                border-radius: 10px;
+                width: calc(50% - 3px);
+                padding: 9px;
+                margin-top: 10px;
+
+                &.final-total {
+                    width: 100%;
+                    padding: 15px;
+                }
+
+                h4 {
+                    font-size: 14px;
+                    color: #888;
+                    font-weight: 500;
+                    margin: 0 0 5px;
+                }
+
+                p {
+                    font-size: 20px;
+                    font-weight: 700;
+                    margin: 0;
+                }
+            }
+        }
+
+        .reserve-confirm-btn {
+            width: 160px;
+            height: 50px;
+            color: #FFF;
+            font-size: 25px;
+            font-weight: 500;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+    }
+}
